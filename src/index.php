@@ -41,12 +41,23 @@ $catalogue = [
 
 // Code à écrire
 
-for ($i= 0 ; $i <= 3 ; $i++){
+/*for ($i= 0 ; $i <= 3 ; $i++){
     echo "Produit: ".$catalogue[$i]["nom"]."- Prix: ".$catalogue[$i]["prix"]. "EUR  \n";
-}
+}*/
  $somme = 0;
-for($j = 0 ; $j <= count($catalogue) - 1;$j++){
-   $somme = $somme + $catalogue[$j]["stock"];
+/*for($j = 0 ; $j <= count($catalogue) - 1;$j++){qq²
+   $somme = $somme + $catalogitgue[$j]["stock"];
    
 }
+echo "Total du stock: ". $somme;*/
+foreach($catalogue as $index){
+    
+        echo "Produit: ".$index["nom"]."- Prix: ".$index["prix"]."EUR  \n";
+    
+
+}
+foreach($catalogue as $index){
+    $somme = $somme + $index['stock'];
+}
 echo "Total du stock: ". $somme;
+
